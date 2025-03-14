@@ -1,6 +1,6 @@
 from collections import Counter
 from io import StringIO
-from tokenize import generate_tokens, tokenize
+import re
 
 # from yellowbrick.text import plot_counter
 
@@ -16,12 +16,7 @@ class Document:
         self.word_counts = self._count_words()
 
     def _tokenize(self):
-        lst = []
-        tokens = generate_tokens(StringIO(self.text).readline)
-        for token in tokens:
-            lst.append(token.string)
-
-        return lst
+        return tokenize(self.text)
 
     # non-public method to tally document's word counts with Counter
     def _count_words(self):
@@ -42,3 +37,17 @@ class Document:
 
         plot_counter(getattr(self, attribute), n_most_common)
 '''
+
+
+# Complete the function's docstring
+def tokenize(text, regex=r"[a-zA-z]+"):
+    """Split text into tokens using a regular expression
+
+    :param text: text to be tokenized
+    :param regex: regular expression used to match tokens using re.findall
+    :return: a list of resulting tokens
+
+    >>> tokenize('the rain in spain')
+    ['the', 'rain', 'in', 'spain']
+    """
+    return re.findall(regex, text, flags=re.IGNORECASE)
