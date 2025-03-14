@@ -4,8 +4,7 @@ from collections import Counter
 
 class SocialMedia(Document):
     def __init__(self, text):
-        self.text = text
-        Document.__init__(self, text)
+        super().__init__(text=text)
 
         self.hashtag_counts = self._count_hashtags()
         self.mention_counts = self._count_mentions()
