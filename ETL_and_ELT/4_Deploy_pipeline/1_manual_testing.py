@@ -1,5 +1,5 @@
 import pandas as pd
-from extract_transform_load import extract, transform, load
+from pipeline_utils import extract, transform, load
 
 file_path = "/home/myothet/myothet/mmdt-datacamp-de/ETL_and_ELT/data/raw_tax_data.csv"
 

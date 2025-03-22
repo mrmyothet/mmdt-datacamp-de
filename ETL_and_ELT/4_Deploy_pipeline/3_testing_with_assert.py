@@ -1,5 +1,5 @@
 import pandas as pd
-from extract_transform_load import extract, transform
+from pipeline_utils import extract, transform
 
 
 raw_file_path = "../data/raw_tax_data.csv"
