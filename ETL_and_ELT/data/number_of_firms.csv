@@ -1,0 +1,97 @@
+,industry_name,number_of_firms
+0,Advertising,58
+1,Aerospace/Defense,77
+2,Air Transport,21
+3,Apparel,39
+4,Auto & Truck,31
+5,Auto Parts,37
+6,Bank (Money Center),7
+7,Banks (Regional),557
+8,Beverage (Alcoholic),23
+9,Beverage (Soft),31
+10,Broadcasting,26
+11,Brokerage & Investment Banking,30
+12,Building Materials,45
+13,Business & Consumer Services,164
+14,Cable TV,10
+15,Chemical (Basic),38
+16,Chemical (Diversified),4
+17,Chemical (Specialty),76
+18,Coal & Related Energy,19
+19,Computer Services,80
+20,Computers/Peripherals,42
+21,Construction Supplies,49
+22,Diversified,23
+23,Drugs (Biotechnology),598
+24,Drugs (Pharmaceutical),281
+25,Education,33
+26,Electrical Equipment,110
+27,Electronics (Consumer & Office),16
+28,Electronics (General),138
+29,Engineering/Construction,43
+30,Entertainment,110
+31,Environmental & Waste Services,62
+32,Farming/Agriculture,39
+33,Financial Svcs. (Non-bank & Insurance),223
+34,Food Processing,92
+35,Food Wholesalers,14
+36,Furn/Home Furnishings,32
+37,Green & Renewable Energy,19
+38,Healthcare Products,254
+39,Healthcare Support Services,131
+40,Heathcare Information and Technology,138
+41,Homebuilding,32
+42,Hospitals/Healthcare Facilities,34
+43,Hotel/Gaming,69
+44,Household Products,127
+45,Information Services,73
+46,Insurance (General),21
+47,Insurance (Life),27
+48,Insurance (Prop/Cas.),51
+49,Investments & Asset Management,600
+50,Machinery,116
+51,Metals & Mining,68
+52,Office Equipment & Services,16
+53,Oil/Gas (Integrated),4
+54,Oil/Gas (Production and Exploration),174
+55,Oil/Gas Distribution,23
+56,Oilfield Svcs/Equip.,101
+57,Packaging & Container,25
+58,Paper/Forest Products,7
+59,Power,48
+60,Precious Metals,74
+61,Publishing & Newspapers,20
+62,R.E.I.T.,223
+63,Real Estate (Development),18
+64,Real Estate (General/Diversified),12
+65,Real Estate (Operations & Services),60
+66,Recreation,57
+67,Reinsurance,1
+68,Restaurant/Dining,70
+69,Retail (Automotive),30
+70,Retail (Building Supply),15
+71,Retail (Distributors),69
+72,Retail (General),15
+73,Retail (Grocery and Food),13
+74,Retail (Online),63
+75,Retail (Special Lines),78
+76,Rubber& Tires,3
+77,Semiconductor,68
+78,Semiconductor Equip,30
+79,Shipbuilding & Marine,8
+80,Shoe,13
+81,Software (Entertainment),91
+82,Software (Internet),33
+83,Software (System & Application),390
+84,Steel,28
+85,Telecom (Wireless),16
+86,Telecom. Equipment,79
+87,Telecom. Services,49
+88,Tobacco,15
+89,Transportation,18
+90,Transportation (Railroads),4
+91,Trucking,35
+92,Utility (General),15
+93,Utility (Water),16
+94,Total Market,7165
+95,Total Market (without financials),5649
