@@ -8,14 +8,12 @@ def print_df(df: pd.DataFrame):
     print(df.head())
 
 
-# Extract function is already implemented for you
 def extract(store_data, extra_data):
     extra_df = pd.read_parquet(extra_data)
     merged_df = store_data.merge(extra_df, on="index")
     return merged_df
 
 
-# Create the transform() function with one parameter: "raw_data"
 def transform(raw_data: pd.DataFrame):
 
     # print(raw_data["CPI"].unique())
@@ -47,11 +45,51 @@ def transform(raw_data: pd.DataFrame):
     return clean_data
 
 
+def avg_weekly_sales_per_month(clean_data: pd.DataFrame):
+    agg_df = clean_data[["Month", "Weekly_Sales"]]
+
+    agg_df = agg_df.groupby(["Month"])["Weekly_Sales"].mean().reset_index().round(2)
+
+    agg_df.rename(columns={"Weekly_Sales": "Avg_Sales"}, inplace=True)
+
+    return agg_df
+
+
+def load(
+    full_data: pd.DataFrame,
+    full_data_file_path: str,
+    agg_data: pd.DataFrame,
+    agg_data_file_path: str,
+):
+    full_data.to_csv(full_data_file_path, index=False)
+    agg_data.to_csv(agg_data_file_path, index=False)
+
+
+def validation(file_path):
+    if os.path.exists(file_path):
+        print(file_path)
+    else:
+        raise FileNotFoundError
+
+
 # Call the extract() function and store it as the "merged_df" variable
 grocery_sales = pd.read_csv("grocery_sales.csv")
 merged_df = extract(grocery_sales, "extra_data.parquet")
 # print(merged_df)
 
 # Call the transform() function and pass the merged DataFrame
-clean_data = transform(merged_df)
-print_df(clean_data)
+clean_df = transform(merged_df)
+# print(clean_df)
+
+# Call the avg_weekly_sales_per_month() function and pass the cleaned DataFrame
+agg_df = avg_weekly_sales_per_month(clean_df)
+# print_df(agg_df)
+
+# Call the load() function and pass the cleaned and aggregated DataFrames with their paths
+clean_data_file_path = "clean_data.csv"
+agg_data_file_path = "agg_data.csv"
+load(clean_df, clean_data_file_path, agg_df, agg_data_file_path)
+
+# Call the validation() function and pass first, the cleaned DataFrame path, and then the aggregated DataFrame path
+validation(clean_data_file_path)
+validation(agg_data_file_path)
