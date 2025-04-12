@@ -16,7 +16,7 @@ else:
 logging.basicConfig(
     level=logging.DEBUG,  # Set the minimum logging level
     format="%(asctime)s - %(levelname)s - %(message)s",  # Define the log message format
-    filename="./week9_demo/mmdt_etl.log",
+    filename="./etl_demo.log",
 )
 
 
