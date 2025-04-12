@@ -6,6 +6,9 @@ on:
       
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs: 
   simple-etl:
     runs-on: ubuntu-latest
@@ -29,7 +32,7 @@ jobs:
         run : python etl_demo.py
         env: 
           WEATHER_KEY: ${{ secrets.WEATHER_KEY }}
-          SQLITE: ${{ secrets.SQLITE }}
+          sqlite: ${{ secrets.SQLITE }}
           
       - name: Push changes for saved sqlite db 
         run: |
