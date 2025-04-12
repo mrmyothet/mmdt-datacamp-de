@@ -27,3 +27,7 @@ jobs:
 
       - name: Run ETL pipeline
         run : python etl_demo.py
+        env: 
+          WEATHER_KEY: ${{ secrets.WEATHER_KEY }}
+          SQLITE_DB: ${{ secrets.SQLITE_DB }}
+          
