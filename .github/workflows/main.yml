@@ -21,3 +21,9 @@ jobs:
         run: pip install -r requirements.txt
       - name: run python file as testing
         run: python covid_19_data.py
+
+      - name: print weather api key
+        run: echo ${{ secrets.WEATHER_KEY }}
+
+      - name: Run ETL pipeline
+        run : python etl_demo.py
