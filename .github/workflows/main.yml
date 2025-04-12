@@ -3,7 +3,6 @@ on:
   push: 
     branches: 
       - main
-      - apache_airflow
       
   workflow_dispatch:
 
@@ -11,5 +10,12 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps: 
-      - name: Hello World
-        run: echo "Hello World"
+      - name: checkout repo
+        uses: actions/checkout@v4
+      - name: setup python 
+        uses: actions/setup-python@v5
+        with: 
+          python-version: "3.12"
+          cache: "pip"
+      - name: install libraries
+        run: pip install -r requirements.txt
