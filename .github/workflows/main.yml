@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs: 
-  first-job:
+  simple-etl:
     runs-on: ubuntu-latest
     steps: 
       - name: checkout repo
