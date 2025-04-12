@@ -29,5 +29,11 @@ jobs:
         run : python etl_demo.py
         env: 
           WEATHER_KEY: ${{ secrets.WEATHER_KEY }}
-          SQLITE_DB: ${{ secrets.SQLITE }}
+          SQLITE: ${{ secrets.SQLITE }}
           
+      - name: Push changes for saved sqlite db 
+        run: |
+          git config user.name "Github-actions"
+          git config user.email "action@users.noreply.github.com"
+          git add ./etl_demo.db
+          git commit -m "Push db from pipeline" && git push || true
