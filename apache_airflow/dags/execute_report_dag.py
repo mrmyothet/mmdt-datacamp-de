@@ -3,7 +3,15 @@ from airflow.operators.bash import BashOperator
 from airflow.sensors.filesystem import FileSensor
 from datetime import datetime
 
-report_dag = DAG(dag_id="execute_report", schedule_interval="0 0 * * *")
+default_args = {
+    "email": ["airflowalerts@datacamp.com", "airflowadmin@datacamp.com"],
+    "email_on_failure": True,
+    "email_on_success": True,
+}
+
+report_dag = DAG(
+    dag_id="execute_report", schedule_interval="0 0 * * *", default_args=default_args
+)
 
 precheck = FileSensor(
     task_id="check_for_datafile",
