@@ -1,0 +1,1 @@
+echo '### Run consolidate_data.sh ###'
