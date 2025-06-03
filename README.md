@@ -24,6 +24,4 @@
 
 ---
 
-### Certificate of Completion
-
-![Certificate of Completion](https://drive.google.com/file/d/1riIwP_dzYBsOz2ekofu0EfFze6QFugLJ/view?usp=drive_link)
+![Certificate of Completion](./MT.jpg)
